@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>My Projects and Learning Journey</h1>
+  <p>Click below to view my works:</p>
+
+  <a href="#my-work" class="button scroll-link">🚀 See What I’ve Learned</a>
+
+  <!-- بخش معرفی پروژه‌ها -->
+  <div id="my-work" class="projects-section">
+    <h2>✨ Featured Projects</h2>
+
+    <div class="project-card">
+      <img src="images/project1.jpg" alt="Project 1" />
+      <p>HTML + CSS Portfolio Page</p>
+    </div>
+
+    <div class="project-card">
+      <img src="images/project2.jpg" alt="Project 2" />
+      <p>GitHub Pages Deployment</p>
+    </div>
+
+    <div class="project-card">
+      <img src="images/iranian-shop.jpg" alt="Iranian Shop" />
+      <p><a href="#" class="button" onclick="alert('⚠️ This project runs only on localhost using WAMP or XAMPP.'); return false;">🛒 Iranian Shop Project</a></p>
+    </div>
+  </div>
+
+  <!-- گالری عکس‌های پروژه‌های کوچیک‌تر -->
+  <section id="projects" class="gallery-section">
+    <h2>🖼️ My Project Gallery</h2>
+    <p>Here are some of the small practice projects I've made:</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/project1.jpg" alt="Project 1" />
+        <p>Todo App Design</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/project2.jpg" alt="Project 2" />
+        <p>Personal Website Layout</p>
+      </div>
+      <!-- می‌تونی ادامه بدی و پروژه‌های کوچیک دیگه‌ات رو هم اضافه کنی -->
+    </div>
+  </section>
+
+  <a href="index.html" class="button">⬅️ Back to Home</a>
+
+  <script>
+    document.querySelectorAll('.scroll-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
